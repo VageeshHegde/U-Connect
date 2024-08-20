@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Sign_Up3.css">
+    <link rel="website icon" type="jpg" href="Logo/Vlogo4.webp">
+    <style>
+        /* Override Bootstrap styles */
+        /* body .container {
+            background-color: rgba(255, 255, 255, 0.8) !important; /* Important to ensure it overrides Bootstrap */
+        /* } */ */
+        span{
+        font-size: small;
+        }
+        i{
+        font-size: 1.2rem;
+        }
+         /* Style for social icons */
+         .social-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding: 12px;
+        }
+
+        .social-icons span {
+            margin: 0 10px;
+        }
+
+        .social-icons i {
+            transition: color 0.3s ease;
+            font-size: 1.7rem;
+        }
+
+        /* .social-icons .fa-google:hover {
+            color: #DB4437;
+        } */
+
+        .social-icons .fa-google:hover {
+            color: #34A853;
+        }
+
+        .social-icons .fa-apple:hover {
+            color: #A2AAAD;
+        }
+
+        .social-icons .fa-twitter:hover {
+            color: #1DA1F2;
+        }
+
+        .social-icons .fa-facebook:hover {
+            color: #1877F2;
+        }
+
+        .social-icons .fa-slack:hover {
+            color: #4A154B;
+        }
+
+        .social-icons .fa-linkedin:hover {
+            color: #0077B5;
+        }
+
+        .social-icons .fa-microsoft:hover {
+            color: #F25022;
+        }
+
+        .social-icons span {
+    position: relative;
+    display: inline-block;
+}
+
+.social-icons .fa-google::after,
+.social-icons .fa-apple::after,
+.social-icons .fa-twitter::after,
+.social-icons .fa-facebook::after,
+.social-icons .fa-slack::after,
+.social-icons .fa-linkedin::after,
+.social-icons .fa-microsoft::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: #fff; /* Optional: Add a background color for better readability */
+    padding: 2px 5px; /* Optional: Add padding for better spacing */
+    border-radius: 3px; /* Optional: Add border-radius for rounded corners */
+}
+
+.social-icons span:hover i::after {
+    opacity: 1;
+}
+
+
+        /* Horizontal line with text */
+        .social-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-divider hr {
+            flex: 1;
+            border: none;
+            height: 1px;
+            background-color: #443737;
+            margin: 0 20px;
+        }
+        .signup{
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div style="margin-left: 5rem; margin-right: 5rem;">
+        <header style="background-color: rgba(255, 255, 255, 0.8) !important;">
+            <h2>V-Join</h2>
+            <nav>
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>Articles</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-message"></i>
+                    <span>Messages</span>
+                </a>
+            </nav>                
+        </header>
+        <br>
+        <!-- <div class="shadow p-3 mb-5 bg-body-tertiary rounded"> -->
+            <div class="signup" style="background-color: rgba(255, 255, 255, 0.8) !important;">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <img src="Logo/logIn.svg">
+          </div>
+          <div class="col-6" style="padding: 5px;">
+            <h3 style="margin-left: 12px;">Welcome back</h3>
+            <h4 style="margin-left: 12px;">Login</h4>
+            <form style="padding: 15px; padding-right: 30px;">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"><i class="fa-solid fa-envelope"></i> Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"><i class="fa-solid fa-unlock"></i> Password</label>
+                  <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
+                  <div class="input-group">
+                    <input type="password" id="exampleInputPassword1" name="password" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-eye-slash"></i></button>
+                  </div>
+                  <div id="emailHelp" class="form-text"><a href="#">Forgot Password?</a></div>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="reset" value="Reset" class="btn btn-light">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!-- Horizontal line with text -->
+            <div class="social-divider">
+                <hr>
+                <span>Other log in options</span>
+                <hr>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="d-flex justify-content-between mb-3 social-icons">
+                <span><i class="fa-brands fa-google" title="Google"></i></span>
+                <span><i class="fa-brands fa-apple" title="Apple"></i></span>
+                <span><i class="fa-brands fa-twitter" title="Twitter"></i></span>
+                <span><i class="fa-brands fa-facebook" title="Facebook"></i></span>
+                <span><i class="fa-brands fa-slack" title="Slack"></i></span>
+                <span><i class="fa-brands fa-linkedin" title="LinkedIn"></i></span>
+                <span><i class="fa-brands fa-microsoft" title="Microsoft"></i></span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    </div>
+</div>
+<script>
+     document.getElementById('button-addon2').addEventListener('click', function () {
+            const passwordField = document.getElementById('exampleInputPassword1');
+            const icon = this.querySelector('i');
+
+            // Toggle the type attribute
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            // Toggle the eye and eye-slash icon
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Sign_Up3.css">
+    <link rel="website icon" type="image/jpeg" href="Logo/Vlogo5.webp">
+    <style>
+        /* Override Bootstrap styles */
+        body .container {
+            background-color: rgba(255, 255, 255, 0.8) !important;
+        }
+        span {
+            font-size: small;
+        }
+        i {
+            font-size: 1.2rem;
+        }
+        form {
+            margin-bottom: 35px !important;
+        }
+        /* Hover effects for social media icons */
+        /* .social-icons .google:hover { color: #DB4437; } */
+        .social-icons .google:hover { color: #34A853; }
+        .social-icons .apple:hover { color: #A3AAAE; }
+        .social-icons .twitter:hover { color: #1DA1F2; }
+        .social-icons .facebook:hover { color: #4267B2; }
+        .social-icons .slack:hover { color: #4A154B; }
+        .social-icons .linkedin:hover { color: #0077B5; }
+        .social-icons .microsoft:hover { color: #F25022; }
+        .social-icons span {
+            position: relative;
+            display: inline-block;
+        }
+        .social-icons .fa-google::after,
+        .social-icons .fa-apple::after,
+        .social-icons .fa-twitter::after,
+        .social-icons .fa-facebook::after,
+        .social-icons .fa-slack::after,
+        .social-icons .fa-linkedin::after,
+        .social-icons .fa-microsoft::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: #fff;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .social-icons span:hover i::after {
+            opacity: 1;
+        }
+        .signup{
+          padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>V-Join</h2>
+            <nav>
+                <a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                <a href="#"><i class="fa-solid fa-globe"></i><span>Explore</span></a>
+                <a href="#"><i class="fa-solid fa-newspaper"></i><span>Articles</span></a>
+                <a href="#"><i class="fa-solid fa-message"></i><span>Messages</span></a>
+            </nav>
+        </header>
+        <br>
+        <div class="signup">
+            <div class="row align-items-center">
+                <div class="col-5">
+                    <img src="Logo/signUp.svg" alt="Sign Up">
+                </div>
+                <div class="col-7 text-center">
+                    <h2>Welcome to V-Join</h2>
+                    <p>Connecting Visionaries, Adding Value, Celebrating Victories Together.</p>
+                    <p>V-Join: "V" stands for "Venture," "Vision," and "Victory,". At V Join, we connect startup founders with like-minded innovators, helping you build a network that fuels your vision, supports your venture, and celebrates your victories.</p>
+                    <h3>Create an Account</h3>
+                    <p>Start your journey by creating an account with us and explore the power of social connections.</p>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Sign Up <i class="fa-solid fa-user-plus"></i>
+                    </button>
+                    <br><br>
+                    <h4>Already have an Account?</h4>
+                    <a class="btn btn-outline-primary" href="Login.html" role="button">Sign In <i class="fa-solid fa-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sign-Up Form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signup-form" class="needs-validation" novalidate>
+                        <div class="form-row row text-start align-items-center">
+                            <div class="mb-4 row text-start align-items-center">
+                                <div class="col">
+                                    <label for="name" class="form-label"><i class="fa-solid fa-circle-user"></i> Name:</label>
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="name" name="name" placeholder="Full Name" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your name.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 row text-start align-items-center">
+                                <div class="col">
+                                    <label for="phoneNumber" class="form-label"><i class="fa-solid fa-mobile-screen-button"></i> Phone Number:</label>
+                                </div>
+                                <div class="col">
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="only 10 digit number" class="form-control" pattern="\d{10}" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid 10-digit phone number.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 row text-start align-items-center">
+                                <div class="col">
+                                    <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> Email:</label>
+                                </div>
+                                <div class="col">
+                                    <input type="email" id="email" name="email" placeholder="example@gmail.com" class="form-control" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 row text-start align-items-center">
+                                <div class="col">
+                                    <label for="password" class="form-label"><i class="fa-solid fa-unlock"></i> Password:</label>
+                                </div>
+                                <div class="col">
+                                    <div class="input-group">
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-eye-slash"></i></button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                      Please enter your password.
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="mb-4 row text-start align-items-center">
+                                <div class="col">
+                                    <label for="password1" class="form-label"><i class="fa-solid fa-lock"></i> Confirm Password:</label>
+                                </div>
+                                <div class="col">
+                                    <div class="input-group">
+                                        <input type="password" id="password1" name="password" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon3"><i class="fa-solid fa-eye-slash"></i></button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                      Please confirm your password.
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider with text -->
+                        <div class="d-flex align-items-center mb-3">
+                            <hr class="flex-grow-1">
+                            <span class="px-2">or sign up with</span>
+                            <hr class="flex-grow-1">
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="d-flex justify-content-between mb-3 social-icons">
+                            <span><i class="fa-brands fa-google fa-2x google" title="Google"></i></span>
+                            <span><i class="fa-brands fa-apple fa-2x apple" title="Apple"></i></span>
+                            <span><i class="fa-brands fa-twitter fa-2x twitter" title="Twitter"></i></span>
+                            <span><i class="fa-brands fa-facebook fa-2x facebook" title="Facebook"></i></span>
+                            <span><i class="fa-brands fa-slack fa-2x slack" title="Slack"></i></span>
+                            <span><i class="fa-brands fa-linkedin fa-2x linkedin" title="LinkedIn"></i></span>
+                            <span><i class="fa-brands fa-microsoft fa-2x microsoft" title="Microsoft"></i></span>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for Bootstrap validation
+        (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity() || !passwordsMatch() || !validatePassword()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+
+        function passwordsMatch() {
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('password1');
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match");
+                return false;
+            } else {
+                confirmPassword.setCustomValidity("");
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password');
+            const passwordRequirements = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordRequirements.test(password.value)) {
+                password.setCustomValidity("Password must be at least 8 characters long, include an uppercase letter, a number, and a special character.");
+                return false;
+            } else {
+                password.setCustomValidity("");
+                return true;
+            }
+        }
+    })();
+
+        // Toggle Password Visibility
+        document.getElementById('button-addon2').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const icon = this.querySelector('i');
+
+            // Toggle the type attribute
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            // Toggle the eye and eye-slash icon
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+        });
+
+        document.getElementById('button-addon3').addEventListener('click', function () {
+            const passwordField = document.getElementById('password1');
+            const icon = this.querySelector('i');
+
+            // Toggle the type attribute
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            // Toggle the eye and eye-slash icon
+            icon.classList.toggle('fa-eye-slash');
+            icon.classList.toggle('fa-eye');
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
